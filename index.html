@@ -36,7 +36,6 @@
         --teal: #0f7a70;
         --foil: linear-gradient(100deg, #6a55d6, #0f7a70, #c98f22, #c8451b, #b04fd8, #2f7fd0, #6a55d6);
         --chrome: linear-gradient(100deg, #525963, #a7aeb8, #ffffff, #7c848e, #dde1e7, #616872, #f7f9fb, #525963);
-        --fire-grad: linear-gradient(100deg, #6b0900, #a51200, #cf3a06, #e8680c, #b81f00, #8c0f00, #d94e05, #6b0900);
         /* Text printed directly on the chrome field (not on a card/panel):
            dark in both schemes, like ink on a foil card. */
         --field-ink: #1d1830;
@@ -121,9 +120,22 @@
         from { background-position: 0% 50%; }
         to { background-position: 200% 50%; }
       }
-      /* Wordmark: "River" flows like water, "Fire" flickers like flame.
-         The global prefers-reduced-motion rule freezes both. */
-      .river-word {
+      /* Wordmark: the WHOLE name "RiverFire" is one treatment — the flowing
+         dark-blue river gradient across all nine letters — enveloped in a
+         warm flame aura that BREATHES: a slow, smooth swell and ease, in and
+         out like breath. No red letters, no flicker. The global
+         prefers-reduced-motion rule freezes both the flow and the breath,
+         leaving the resting glow in place. */
+      .wordmark {
+        display: inline-block;
+        filter: drop-shadow(0 0 7px rgba(184, 31, 0, .55)) drop-shadow(0 -1px 18px rgba(232, 104, 12, .38)) drop-shadow(0 -2px 34px rgba(255, 140, 20, .20));
+        animation: flame-breath 5s ease-in-out infinite;
+      }
+      @keyframes flame-breath {
+        0%, 100% { filter: drop-shadow(0 0 7px rgba(184, 31, 0, .55)) drop-shadow(0 -1px 18px rgba(232, 104, 12, .38)) drop-shadow(0 -2px 34px rgba(255, 140, 20, .20)); }
+        50%      { filter: drop-shadow(0 0 11px rgba(207, 58, 6, .78)) drop-shadow(0 -2px 28px rgba(255, 110, 20, .58)) drop-shadow(0 -3px 52px rgba(255, 160, 40, .34)); }
+      }
+      .wordmark-text {
         background: linear-gradient(100deg, #0d2b52, #17548f, #2e7cc4, #164a7d, #0e5f8a, #0d2b52);
         background-size: 220% 100%;
         -webkit-background-clip: text;
@@ -134,26 +146,6 @@
       @keyframes river-flow {
         0%, 100% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
-      }
-      .fire-word {
-        display: inline-block;
-        transform-origin: 50% 100%;
-        animation: foil-pan 5s linear infinite, fire-flicker 1.15s linear infinite;
-      }
-      /* Flame flicker: fast, irregular brightness jumps with a pulsing ember
-         glow and a slight heat-shimmer skew — no swelling/budging scale. */
-      @keyframes fire-flicker {
-        0%   { transform: translateY(0) skewX(0deg);        filter: brightness(1)    drop-shadow(0 0 6px rgba(232, 90, 10, .45)); }
-        8%   { transform: translateY(-1px) skewX(-1.2deg);   filter: brightness(1.24) drop-shadow(0 0 13px rgba(255, 110, 20, .65)); }
-        17%  { transform: translateY(0) skewX(0.6deg);       filter: brightness(0.92) drop-shadow(0 0 4px rgba(200, 50, 0, .35)); }
-        26%  { transform: translateY(-1.5px) skewX(1deg);    filter: brightness(1.32) drop-shadow(0 0 15px rgba(255, 130, 30, .7)); }
-        35%  { transform: translateY(0) skewX(-0.4deg);     filter: brightness(1.05) drop-shadow(0 0 7px rgba(230, 80, 10, .5)); }
-        47%  { transform: translateY(-0.5px) skewX(-1.4deg); filter: brightness(1.18) drop-shadow(0 0 11px rgba(255, 100, 15, .6)); }
-        58%  { transform: translateY(0.5px) skewX(0.8deg);  filter: brightness(0.88) drop-shadow(0 0 3px rgba(180, 40, 0, .3)); }
-        69%  { transform: translateY(-1px) skewX(0.3deg);    filter: brightness(1.27) drop-shadow(0 0 14px rgba(255, 120, 25, .68)); }
-        80%  { transform: translateY(0) skewX(-0.8deg);     filter: brightness(1.02) drop-shadow(0 0 6px rgba(220, 70, 5, .45)); }
-        91%  { transform: translateY(-0.5px) skewX(1.1deg); filter: brightness(1.15) drop-shadow(0 0 10px rgba(250, 100, 20, .6)); }
-        100% { transform: translateY(0) skewX(0deg);        filter: brightness(1)    drop-shadow(0 0 6px rgba(232, 90, 10, .45)); }
       }
 
       /* ---------- top bar ---------- */
@@ -173,13 +165,6 @@
         text-transform: uppercase; letter-spacing: 0.04em;
         font-size: 19px; text-decoration: none; line-height: 1.1;
         white-space: nowrap;
-      }
-      .brand .fire-word {
-        background: var(--fire-grad);
-        background-size: 220% 100%;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
       }
       .brand small {
         display: block; font-size: 10.5px; font-weight: 500;
@@ -244,16 +229,6 @@
       .hero .kicker { color: var(--gold-bright); }
       .hero h1 { font-size: clamp(36px, 10.5vw, 76px); font-weight: 700; }
       @media (min-width: 861px) { .hero h1 { font-size: clamp(44px, 7.2vw, 76px); } }
-      .hero h1 .fire {
-        background: var(--fire-grad);
-        background-size: 220% 100%;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        display: inline-block;
-        transform-origin: 50% 100%;
-        animation: foil-pan 5s linear infinite, fire-flicker 1.15s linear infinite;
-      }
       .hero .lede {
         font-size: clamp(18px, 2.4vw, 22px); color: var(--hero-muted);
         margin: 18px 0 8px; max-width: 34em;
@@ -546,7 +521,7 @@
   <body>
     <header class="topbar">
       <div class="wrap topbar-in">
-        <a class="brand" href="#top"><span class="river-word">River</span><span class="fire-word">Fire</span> Entertainment<small>Tampa Bay &bull; Florida</small></a>
+        <a class="brand" href="#top"><span class="wordmark"><span class="wordmark-text">RiverFire</span></span> Entertainment<small>Tampa Bay &bull; Florida</small></a>
         <nav class="main" aria-label="Main">
           <a href="#services">Services</a>
           <a href="#lessons">Guitar Lessons</a>
@@ -565,7 +540,7 @@
         <div class="wrap hero-in">
           <div>
             <p class="kicker">Tampa Bay &bull; Florida</p>
-            <h1><span class="river-word">River</span><span class="fire">Fire</span><br />Entertainment</h1>
+            <h1><span class="wordmark"><span class="wordmark-text">RiverFire</span></span><br />Entertainment</h1>
             <p class="lede"><strong>RiverFire Guitar Academy — Guitar Lessons.</strong> DJ Entertainment. Live Acoustic Music. Professional Sound. Family-friendly entertainment for churches, ministries, families, celebrations, community events and special occasions throughout the Tampa Bay area.</p>
             <div class="hero-ctas">
               <a class="btn btn-gold" href="tel:4849579223">&#128222; Call / Text 484-957-9223</a>
