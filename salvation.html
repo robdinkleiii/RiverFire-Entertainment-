@@ -552,8 +552,20 @@
         }
       }
       body {
-        background: var(--holo-field), var(--chrome);
-        background-size: 300% 100%, 220% 100%;
+        background:
+          linear-gradient(rgba(238, 240, 247, 0.80), rgba(238, 240, 247, 0.86)),
+          url("home-hero-bg.jpg") center / cover fixed no-repeat,
+          var(--chrome);
+        background-size: 100% 100%, cover, 220% 100%;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background:
+            linear-gradient(rgba(10, 12, 22, 0.78), rgba(10, 12, 22, 0.86)),
+            url("home-hero-bg.jpg") center / cover fixed no-repeat,
+            var(--chrome);
+          background-size: 100% 100%, cover, 220% 100%;
+        }
       }
       .card, .topic, .fact-box, figure.shot, blockquote.verse {
         border: 1.5px solid transparent;
