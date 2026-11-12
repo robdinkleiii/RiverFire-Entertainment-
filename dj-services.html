@@ -552,8 +552,20 @@
         }
       }
       body {
-        background: var(--holo-field), var(--chrome);
-        background-size: 300% 100%, 220% 100%;
+        background:
+          linear-gradient(rgba(238, 240, 247, 0.80), rgba(238, 240, 247, 0.86)),
+          url("home-hero-bg.jpg") center / cover fixed no-repeat,
+          var(--chrome);
+        background-size: 100% 100%, cover, 220% 100%;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background:
+            linear-gradient(rgba(10, 12, 22, 0.78), rgba(10, 12, 22, 0.86)),
+            url("home-hero-bg.jpg") center / cover fixed no-repeat,
+            var(--chrome);
+          background-size: 100% 100%, cover, 220% 100%;
+        }
       }
       .card, .topic, .fact-box, figure.shot, blockquote.verse {
         border: 1.5px solid transparent;
@@ -725,6 +737,15 @@
                 <a class="btn btn-hero-ghost" id="book-text" href="sms:4849579223?&amp;body=Hi%20Robert!%20I%27m%20interested%20in%20RiverFire%20Guitar%20Academy%20-%20Guitar%20Lessons.">Text to Book</a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tight">
+        <div class="wrap">
+          <div class="jesus-strip">
+            <p><strong>Do you know Jesus?</strong> If not, let me tell you about Him. And if you&rsquo;ve backslidden — walked away, turned away — and you want to turn back, let me talk to you.</p>
+            <a class="btn btn-ember" href="salvation.html">Let Me Tell You About Jesus</a>
           </div>
         </div>
       </section>

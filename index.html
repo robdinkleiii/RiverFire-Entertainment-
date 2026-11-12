@@ -552,8 +552,20 @@
         }
       }
       body {
-        background: var(--holo-field), var(--chrome);
-        background-size: 300% 100%, 220% 100%;
+        background:
+          linear-gradient(rgba(238, 240, 247, 0.80), rgba(238, 240, 247, 0.86)),
+          url("home-hero-bg.jpg") center / cover fixed no-repeat,
+          var(--chrome);
+        background-size: 100% 100%, cover, 220% 100%;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background:
+            linear-gradient(rgba(10, 12, 22, 0.78), rgba(10, 12, 22, 0.86)),
+            url("home-hero-bg.jpg") center / cover fixed no-repeat,
+            var(--chrome);
+          background-size: 100% 100%, cover, 220% 100%;
+        }
       }
       .card, .topic, .fact-box, figure.shot, blockquote.verse {
         border: 1.5px solid transparent;
@@ -626,29 +638,29 @@
         <div class="wrap">
           <p class="kicker">RiverFire &bull; Tampa Bay, Florida</p>
           <h1>Welcome to <span class="flame-word">RiverFire</span></h1>
-          <p class="lede">One family. Four arms. One mission — <strong>Jesus.</strong> Guitar lessons, live music, worship, and the Word. Pick a door.</p>
+          <p class="lede">Guitar lessons, DJ &amp; live music, and professional sound for churches, families, and celebrations across Tampa Bay. One family, four arms — pick a door.</p>
         </div>
       </div>
 
       <section class="tight">
         <div class="wrap">
-          <div class="jesus-strip">
-            <p><strong>Do you know Jesus?</strong> If not, let me tell you about Him. And if you&rsquo;ve backslidden — walked away, turned away — and you want to turn back, let me talk to you.</p>
-            <a class="btn btn-ember" href="salvation.html">Let Me Tell You About Jesus</a>
+          <div class="tabs">
+            <a class="tab" href="guitar-academy.html"><h3>Guitar Academy <span class="arr">&rarr;</span></h3><p>Private lessons — $30 / 30 minutes.</p></a>
+            <a class="tab" href="dj-services.html"><h3>DJ &amp; Events <span class="arr">&rarr;</span></h3><p>DJ, live acoustic &amp; pro sound.</p></a>
+            <a class="tab" href="worship.html"><h3>RiverFire Worship <span class="arr">&rarr;</span></h3><p>The songs — on every platform.</p></a>
+            <a class="tab" href="voice.html"><h3>RiverFire Voice <span class="arr">&rarr;</span></h3><p>Teachings &amp; THE KINGDOM.</p></a>
+            <a class="tab" href="1000-souls.html"><h3>1,000 Souls <span class="arr">&rarr;</span></h3><p>1,000 souls by Christmas.</p></a>
+            <a class="tab" href="about.html"><h3>About &amp; Mission <span class="arr">&rarr;</span></h3><p>Meet Robert — and why RiverFire exists.</p></a>
+            <a class="tab salv wide" href="salvation.html"><h3>Salvation Prayer <span class="arr">&rarr;</span></h3><p>The most important page on this site.</p></a>
           </div>
         </div>
       </section>
 
       <section class="tight">
         <div class="wrap">
-          <div class="tabs">
-            <a class="tab salv" href="salvation.html"><h3>Salvation Prayer <span class="arr">&rarr;</span></h3><p>The most important page on this site.</p></a>
-            <a class="tab" href="guitar-academy.html"><h3>Guitar Academy <span class="arr">&rarr;</span></h3><p>Private lessons — $30 / 30 minutes.</p></a>
-            <a class="tab" href="dj-services.html"><h3>DJ &amp; Events <span class="arr">&rarr;</span></h3><p>DJ, live acoustic &amp; pro sound.</p></a>
-            <a class="tab" href="worship.html"><h3>RiverFire Worship <span class="arr">&rarr;</span></h3><p>The songs — on every platform.</p></a>
-            <a class="tab" href="voice.html"><h3>RiverFire Voice <span class="arr">&rarr;</span></h3><p>Teachings &amp; THE KINGDOM.</p></a>
-            <a class="tab" href="1000-souls.html"><h3>1,000 Souls <span class="arr">&rarr;</span></h3><p>1,000 souls by Christmas.</p></a>
-            <a class="tab wide" href="about.html"><h3>About &amp; Mission <span class="arr">&rarr;</span></h3><p>Meet Robert — and why RiverFire exists.</p></a>
+          <div class="jesus-strip">
+            <p><strong>Do you know Jesus?</strong> If not, let me tell you about Him. And if you&rsquo;ve backslidden — walked away, turned away — and you want to turn back, let me talk to you.</p>
+            <a class="btn btn-ember" href="salvation.html">Let Me Tell You About Jesus</a>
           </div>
         </div>
       </section>
