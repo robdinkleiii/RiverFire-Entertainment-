@@ -523,6 +523,14 @@
       .prose p { color: var(--field-soft); font-size: 17.5px; margin: 0 0 16px; }
       .prose p strong { color: var(--field-ink); }
       .hero .card { color: var(--ink); text-align: left; }
+      nav.main a.salv { color: var(--ember); }
+      .prayer-text { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin: 0; }
+      @media (max-width: 1100px) and (min-width: 761px) {
+        nav.main { gap: 14px; }
+        nav.main a { font-size: 14px; }
+      }
+      .cards.four { grid-template-columns: repeat(2, 1fr); }
+      @media (max-width: 920px) { .cards.four { grid-template-columns: 1fr; } }
 
       /* --- holographic foil pass (Nov 11, 2026) ---
          The whole site wears the foil: an iridescent rainbow sheen laid
@@ -576,8 +584,10 @@
         <a class="brand" href="index.html"><span class="wordmark"><span class="wordmark-text">RiverFire</span></span> Entertainment<small>Tampa Bay &bull; Florida</small></a>
         <nav class="main" aria-label="Main">
           <a href="index.html">Home</a>
+          <a href="salvation.html" class="salv">Salvation Prayer</a>
           <a href="guitar-academy.html">Guitar Academy</a>
           <a href="dj-services.html" class="active">DJ &amp; Events</a>
+          <a href="worship.html">Worship</a>
           <a href="voice.html">RiverFire Voice</a>
           <a href="1000-souls.html">1,000 Souls</a>
         </nav>
@@ -712,8 +722,10 @@
         <span class="sig">RiverFire Entertainment &bull; Tampa Bay, Florida &bull; Founded by Robert Dinkle</span>
         <span>
           <a href="tel:4849579223">484-957-9223</a> &nbsp;&bull;&nbsp;
+          <a href="salvation.html">Salvation Prayer</a> &nbsp;&bull;&nbsp;
           <a href="guitar-academy.html">Guitar Academy</a> &nbsp;&bull;&nbsp;
           <a href="dj-services.html">DJ &amp; Events</a> &nbsp;&bull;&nbsp;
+          <a href="worship.html">Worship</a> &nbsp;&bull;&nbsp;
           <a href="voice.html">RiverFire Voice</a> &nbsp;&bull;&nbsp;
           <a href="https://open.spotify.com/artist/3eeujxKqZMWmJ5cHYLKNdE" target="_blank" rel="noopener noreferrer">Spotify</a> &nbsp;&bull;&nbsp;
           <a href="https://suno.com/@rwdinkle" target="_blank" rel="noopener noreferrer">Suno</a> &nbsp;&bull;&nbsp;

@@ -523,6 +523,14 @@
       .prose p { color: var(--field-soft); font-size: 17.5px; margin: 0 0 16px; }
       .prose p strong { color: var(--field-ink); }
       .hero .card { color: var(--ink); text-align: left; }
+      nav.main a.salv { color: var(--ember); }
+      .prayer-text { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin: 0; }
+      @media (max-width: 1100px) and (min-width: 761px) {
+        nav.main { gap: 14px; }
+        nav.main a { font-size: 14px; }
+      }
+      .cards.four { grid-template-columns: repeat(2, 1fr); }
+      @media (max-width: 920px) { .cards.four { grid-template-columns: 1fr; } }
 
       /* --- holographic foil pass (Nov 11, 2026) ---
          The whole site wears the foil: an iridescent rainbow sheen laid
@@ -576,8 +584,10 @@
         <a class="brand" href="index.html"><span class="wordmark"><span class="wordmark-text">RiverFire</span></span> Entertainment<small>Tampa Bay &bull; Florida</small></a>
         <nav class="main" aria-label="Main">
           <a href="index.html" class="active">Home</a>
+          <a href="salvation.html" class="salv">Salvation Prayer</a>
           <a href="guitar-academy.html">Guitar Academy</a>
           <a href="dj-services.html">DJ &amp; Events</a>
+          <a href="worship.html">Worship</a>
           <a href="voice.html">RiverFire Voice</a>
           <a href="1000-souls.html">1,000 Souls</a>
         </nav>
@@ -610,14 +620,33 @@
           </div>
         </div>
       </div>
+      <section class="tight">
+        <div class="wrap">
+          <div class="book">
+            <div>
+              <p class="kicker">The Most Important Part</p>
+              <h2>Have You Prayed This Prayer?</h2>
+              <p>Everything on this site — the lessons, the music, the teachings — points to one thing: Jesus. If you were to die this very second, do you know for sure, beyond a shadow of a doubt, that you would go to Heaven? Religion can&rsquo;t save you. Jesus can.</p>
+            </div>
+            <div>
+              <div class="row">
+                <a class="btn btn-ember" href="salvation.html">Pray the Salvation Prayer</a>
+                <a class="btn btn-hero-ghost" href="https://forms.gle/2JtW6Ymj1zjPP9qa9" target="_blank" rel="noopener noreferrer">&#128293; I Prayed This Prayer</a>
+              </div>
+              <p class="phone-note">&ldquo;For whosoever shall call upon the name of the Lord shall be saved.&rdquo; — Romans 10:13 KJV</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="paths">
         <div class="wrap">
           <div class="sec-head">
-            <p class="kicker">One RiverFire — Three Doors</p>
+            <p class="kicker">One RiverFire — Four Doors</p>
             <h2>Where Do You Want to Go?</h2>
-            <p>RiverFire is one family with three arms — a guitar academy, an entertainment company, and a teaching voice. Pick your door; every one of them has its own page now.</p>
+            <p>RiverFire is one family with four arms — a guitar academy, an entertainment company, a worship catalog, and a teaching voice. Pick your door; every one of them has its own page now.</p>
           </div>
-          <div class="cards">
+          <div class="cards four">
             <article class="card">
               <p class="tag">Private Guitar Lessons</p>
               <h3>RiverFire Guitar Academy</h3>
@@ -637,6 +666,15 @@
                 <div class="price-row"><span class="hrs">DJ + Live — from</span><span class="amt">$375</span></div>
               </div>
               <a class="btn btn-gold" href="dj-services.html">See Services &amp; Prices</a>
+            </article>
+            <article class="card">
+              <p class="tag">Worship Music</p>
+              <h3>RiverFire Worship</h3>
+              <p class="desc">Original worship songs written and performed by Robert Dinkle — streaming everywhere: Spotify, Apple Music, iHeartRadio, Deezer, and more.</p>
+              <div class="price-rows">
+                <div class="price-row"><span class="hrs">Singles &amp; a 5-song mini album</span><span class="amt">&#9836;</span></div>
+              </div>
+              <a class="btn btn-gold" href="worship.html">Hear the Songs</a>
             </article>
             <article class="card featured">
               <p class="tag">Teachings &amp; Writings</p>
@@ -752,8 +790,10 @@
         <span class="sig">RiverFire Entertainment &bull; Tampa Bay, Florida &bull; Founded by Robert Dinkle</span>
         <span>
           <a href="tel:4849579223">484-957-9223</a> &nbsp;&bull;&nbsp;
+          <a href="salvation.html">Salvation Prayer</a> &nbsp;&bull;&nbsp;
           <a href="guitar-academy.html">Guitar Academy</a> &nbsp;&bull;&nbsp;
           <a href="dj-services.html">DJ &amp; Events</a> &nbsp;&bull;&nbsp;
+          <a href="worship.html">Worship</a> &nbsp;&bull;&nbsp;
           <a href="voice.html">RiverFire Voice</a> &nbsp;&bull;&nbsp;
           <a href="https://open.spotify.com/artist/3eeujxKqZMWmJ5cHYLKNdE" target="_blank" rel="noopener noreferrer">Spotify</a> &nbsp;&bull;&nbsp;
           <a href="https://suno.com/@rwdinkle" target="_blank" rel="noopener noreferrer">Suno</a> &nbsp;&bull;&nbsp;
