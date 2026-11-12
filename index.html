@@ -553,19 +553,28 @@
       }
       body {
         background:
-          linear-gradient(rgba(238, 240, 247, 0.80), rgba(238, 240, 247, 0.86)),
+          linear-gradient(rgba(238, 240, 247, 0.58), rgba(238, 240, 247, 0.68)),
           url("home-hero-bg.jpg") center / cover fixed no-repeat,
           var(--chrome);
         background-size: 100% 100%, cover, 220% 100%;
+        animation: none;
       }
       @media (prefers-color-scheme: dark) {
         body {
           background:
-            linear-gradient(rgba(10, 12, 22, 0.78), rgba(10, 12, 22, 0.86)),
+            linear-gradient(rgba(8, 10, 20, 0.45), rgba(8, 10, 20, 0.58)),
             url("home-hero-bg.jpg") center / cover fixed no-repeat,
             var(--chrome);
           background-size: 100% 100%, cover, 220% 100%;
+          animation: none;
         }
+      }
+      /* prose sits on a soft panel so words stay readable over the bright backdrop */
+      .section .prose {
+        background: color-mix(in srgb, var(--surface) 92%, transparent);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px 18px;
       }
       .card, .topic, .fact-box, figure.shot, blockquote.verse {
         border: 1.5px solid transparent;
