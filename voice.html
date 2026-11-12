@@ -10,11 +10,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="RiverFire Voice — Teachings, Writings & Books by Robert Dinkle" />
     <meta property="og:description" content="RiverFire Voice — the teaching and writing arm of RiverFire. Free biblical teachings every Wednesday, investigations, and the novel THE KINGDOM, by Robert Dinkle. Faith. Fire. Truth. No Compromise." />
-    <meta property="og:image" content="assets/entertainment-banner.jpg" />
+    <meta property="og:image" content="entertainment-banner.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="RiverFire Voice — Teachings, Writings & Books by Robert Dinkle" />
     <meta name="twitter:description" content="RiverFire Voice — the teaching and writing arm of RiverFire. Free biblical teachings every Wednesday, investigations, and the novel THE KINGDOM, by Robert Dinkle. Faith. Fire. Truth. No Compromise." />
-    <meta name="twitter:image" content="assets/entertainment-banner.jpg" />
+    <meta name="twitter:image" content="entertainment-banner.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -523,6 +523,51 @@
       .prose p { color: var(--field-soft); font-size: 17.5px; margin: 0 0 16px; }
       .prose p strong { color: var(--field-ink); }
       .hero .card { color: var(--ink); text-align: left; }
+
+      /* --- holographic foil pass (Nov 11, 2026) ---
+         The whole site wears the foil: an iridescent rainbow sheen laid
+         over the silver chrome stock, panning slowly — rainbow light on
+         silver, the way real holographic foil works. Panels stay solid
+         for readability but every card and frame gets a foil border. */
+      :root {
+        --holo-field: linear-gradient(115deg,
+          rgba(106,85,214,.20), rgba(15,122,112,.16), rgba(201,143,34,.18),
+          rgba(200,69,27,.15), rgba(176,79,216,.20), rgba(47,127,208,.18),
+          rgba(106,85,214,.20));
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --holo-field: linear-gradient(115deg,
+            rgba(106,85,214,.34), rgba(15,122,112,.28), rgba(201,143,34,.26),
+            rgba(200,69,27,.26), rgba(176,79,216,.34), rgba(47,127,208,.30),
+            rgba(106,85,214,.34));
+        }
+      }
+      body {
+        background: var(--holo-field), var(--chrome);
+        background-size: 300% 100%, 220% 100%;
+      }
+      .card, .topic, .fact-box, figure.shot, blockquote.verse {
+        border: 1.5px solid transparent;
+        background:
+          linear-gradient(var(--surface), var(--surface)) padding-box,
+          var(--foil) border-box;
+      }
+      .card.featured, .response {
+        background:
+          linear-gradient(var(--surface), var(--surface)) padding-box,
+          var(--foil) border-box;
+      }
+      .flyer, .faith-art {
+        border: 2px solid transparent;
+        background: var(--foil) border-box;
+      }
+      .hero-photo { background: var(--foil); background-size: 200% 100%; }
+      .book {
+        background:
+          var(--foil) top left / 100% 4px no-repeat,
+          var(--hero-bg);
+      }
     </style>
   </head>
   <body>
