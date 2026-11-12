@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="data:," />
-    <title>RiverFire Entertainment — DJ, Live Acoustic Music & Guitar Lessons | Tampa Bay</title>
-    <meta name="description" content="RiverFire Entertainment & RiverFire Guitar Academy — DJ entertainment, live acoustic music, professional sound, and private guitar lessons in the Tampa Bay area. Founded by Robert Dinkle." />
+    <title>Welcome to RiverFire — Guitar Lessons, DJ & Live Music, Worship & Teachings | Tampa Bay</title>
+    <meta name="description" content="Welcome to RiverFire — one family, four arms, one mission: Jesus. RiverFire Guitar Academy lessons, RiverFire Entertainment DJ & live music, RiverFire Worship songs, and RiverFire Voice teachings in Tampa Bay, Florida." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="RiverFire Entertainment — DJ, Live Acoustic Music & Guitar Lessons | Tampa Bay" />
-    <meta property="og:description" content="RiverFire Entertainment & RiverFire Guitar Academy — DJ entertainment, live acoustic music, professional sound, and private guitar lessons in the Tampa Bay area. Founded by Robert Dinkle." />
-    <meta property="og:image" content="entertainment-banner.jpg" />
+    <meta property="og:title" content="Welcome to RiverFire — Guitar Lessons, DJ & Live Music, Worship & Teachings | Tampa Bay" />
+    <meta property="og:description" content="Welcome to RiverFire — one family, four arms, one mission: Jesus. RiverFire Guitar Academy lessons, RiverFire Entertainment DJ & live music, RiverFire Worship songs, and RiverFire Voice teachings in Tampa Bay, Florida." />
+    <meta property="og:image" content="home-hero-bg.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="RiverFire Entertainment — DJ, Live Acoustic Music & Guitar Lessons | Tampa Bay" />
-    <meta name="twitter:description" content="RiverFire Entertainment & RiverFire Guitar Academy — DJ entertainment, live acoustic music, professional sound, and private guitar lessons in the Tampa Bay area. Founded by Robert Dinkle." />
-    <meta name="twitter:image" content="entertainment-banner.jpg" />
+    <meta name="twitter:title" content="Welcome to RiverFire — Guitar Lessons, DJ & Live Music, Worship & Teachings | Tampa Bay" />
+    <meta name="twitter:description" content="Welcome to RiverFire — one family, four arms, one mission: Jesus. RiverFire Guitar Academy lessons, RiverFire Entertainment DJ & live music, RiverFire Worship songs, and RiverFire Voice teachings in Tampa Bay, Florida." />
+    <meta name="twitter:image" content="home-hero-bg.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -576,6 +576,27 @@
           var(--foil) top left / 100% 4px no-repeat,
           var(--hero-bg);
       }
+
+      /* --- homepage revamp (Nov 11, 2026): welcome hero, Jesus strip, door tabs --- */
+      .home-hero { position: relative; overflow: hidden; background: #0a0d1c url("home-hero-bg.jpg") center / cover no-repeat; text-align: center; }
+      .home-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5, 8, 18, 0.62), rgba(5, 8, 18, 0.38) 45%, rgba(5, 8, 18, 0.78)); }
+      .home-hero .wrap { position: relative; z-index: 1; }
+      .home-hero .lede { margin-left: auto; margin-right: auto; }
+      .home-hero .hero-ctas { justify-content: center; }
+      .flame-word { color: #8dbcff; text-shadow: 0 0 16px rgba(255, 106, 0, 0.9), 0 0 44px rgba(215, 25, 32, 0.6), 0 2px 0 rgba(0, 0, 0, 0.4); animation: flamebreathe 3.4s ease-in-out infinite; display: inline-block; }
+      @keyframes flamebreathe { 0%, 100% { text-shadow: 0 0 14px rgba(255, 106, 0, 0.75), 0 0 36px rgba(215, 25, 32, 0.5), 0 2px 0 rgba(0, 0, 0, 0.4); } 50% { text-shadow: 0 0 22px rgba(255, 140, 0, 1), 0 0 58px rgba(215, 25, 32, 0.75), 0 2px 0 rgba(0, 0, 0, 0.4); } }
+      .jesus-strip { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; justify-content: space-between; border: 2px solid transparent; border-radius: 18px; padding: 20px 24px; color: #ffffff; background: linear-gradient(135deg, #141a2e, #241536) padding-box, var(--foil) border-box; box-shadow: var(--shadow); }
+      .jesus-strip p { margin: 0; font-size: 17px; max-width: 42em; color: #e8ecf7; }
+      .tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .tab { display: block; border: 1.5px solid transparent; border-radius: 16px; padding: 20px 22px; text-decoration: none; color: var(--ink); box-shadow: var(--shadow); background: linear-gradient(var(--surface), var(--surface)) padding-box, var(--foil) border-box; transition: transform 0.18s ease; }
+      .tab:hover { transform: translateY(-2px); }
+      .tab h3 { margin: 0 0 4px; font-size: 20px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+      .tab p { margin: 0; color: var(--field-muted); font-size: 15.5px; }
+      .tab .arr { color: var(--river); font-weight: 800; }
+      .tab.salv h3 { color: var(--ember); }
+      .tab.wide { grid-column: 1 / -1; }
+      @media (max-width: 900px) { .tabs { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 560px) { .tabs { grid-template-columns: 1fr; } .jesus-strip .btn { width: 100%; } }
     </style>
   </head>
   <body>
@@ -597,186 +618,37 @@
     </header>
 
     <main id="top">
-      <div class="hero">
-        <div class="wrap hero-in">
-          <div>
-            <p class="kicker">Tampa Bay &bull; Florida</p>
-            <h1><span class="wordmark"><span class="wordmark-text">RiverFire</span></span><br />Entertainment</h1>
-            <p class="lede"><strong>RiverFire Guitar Academy — Guitar Lessons.</strong> DJ Entertainment. Live Acoustic Music. Professional Sound. Family-friendly entertainment for churches, ministries, families, celebrations, community events and special occasions throughout the Tampa Bay area.</p>
-            <div class="hero-ctas">
-              <a class="btn btn-gold" href="tel:4849579223">&#128222; Call / Text 484-957-9223</a>
-              <a class="btn btn-hero-ghost" href="guitar-academy.html">Guitar Lessons</a>
-            </div>
-          </div>
-          <div class="hero-photo">
-            <img src="hero-portrait.jpg" alt="Robert Dinkle playing electric guitar against holographic foil artwork" />
-          </div>
-        </div>
+      <div class="hero home-hero">
         <div class="wrap">
-          <div class="stats">
-            <div class="stat"><b>30+</b><span>Years of guitar and music experience</span></div>
-            <div class="stat"><b>12</b><span>Years serving on worship teams</span></div>
-            <div class="stat"><b>Tampa Bay</b><span>Riverview &bull; Brandon &bull; Gibsonton &bull; Wimauma &bull; Tampa</span></div>
+          <p class="kicker">RiverFire &bull; Tampa Bay, Florida</p>
+          <h1>Welcome to <span class="flame-word">RiverFire</span></h1>
+          <p class="lede">One family. Four arms. One mission — <strong>Jesus.</strong> Guitar lessons, live music, worship, and the Word. Pick a door.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-ember" href="salvation.html">Meet Jesus</a>
+            <a class="btn btn-hero-ghost" href="tel:4849579223">Call or Text 484-957-9223</a>
           </div>
         </div>
       </div>
+
       <section class="tight">
         <div class="wrap">
-          <div class="book">
-            <div>
-              <p class="kicker">The Most Important Part</p>
-              <h2>Do You Know Jesus?</h2>
-              <p>If not — let me tell you about Him. And if you once walked with Him, but you&rsquo;ve backslidden — walked away, turned away — and you want to turn back, let me talk to you. Whichever one is you, there&rsquo;s a prayer waiting for you on the next page, and it&rsquo;s the most important prayer you&rsquo;ll ever pray.</p>
-            </div>
-            <div>
-              <div class="row">
-                <a class="btn btn-ember" href="salvation.html">Let Me Tell You About Jesus</a>
-              </div>
-              <p class="phone-note">&ldquo;For whosoever shall call upon the name of the Lord shall be saved.&rdquo; — Romans 10:13 KJV</p>
-            </div>
+          <div class="jesus-strip">
+            <p><strong>Do you know Jesus?</strong> If not, let me tell you about Him. And if you&rsquo;ve backslidden — walked away, turned away — and you want to turn back, let me talk to you.</p>
+            <a class="btn btn-ember" href="salvation.html">Let Me Tell You About Jesus</a>
           </div>
         </div>
       </section>
 
-      <section id="paths">
+      <section class="tight">
         <div class="wrap">
-          <div class="sec-head">
-            <p class="kicker">One RiverFire — Four Doors</p>
-            <h2>Where Do You Want to Go?</h2>
-            <p>RiverFire is one family with four arms — a guitar academy, an entertainment company, a worship catalog, and a teaching voice. Pick your door; every one of them has its own page now.</p>
-          </div>
-          <div class="cards four">
-            <article class="card">
-              <p class="tag">Private Guitar Lessons</p>
-              <h3>RiverFire Guitar Academy</h3>
-              <p class="desc">Private one-on-one guitar lessons for all ages — beginner and intermediate, acoustic or electric, worship and acoustic styles.</p>
-              <div class="price-rows">
-                <div class="price-row"><span class="hrs">30-minute private lesson</span><span class="amt">$30</span></div>
-              </div>
-              <a class="btn btn-gold" href="guitar-academy.html">Enter the Academy</a>
-            </article>
-            <article class="card">
-              <p class="tag">DJ &amp; Live Music</p>
-              <h3>RiverFire Entertainment</h3>
-              <p class="desc">Professional DJ service, live acoustic music, or both together — family-friendly entertainment with one sound system and one clean booking process.</p>
-              <div class="price-rows">
-                <div class="price-row"><span class="hrs">DJ — from</span><span class="amt">$300</span></div>
-                <div class="price-row"><span class="hrs">Live Acoustic — from</span><span class="amt">$250</span></div>
-                <div class="price-row"><span class="hrs">DJ + Live — from</span><span class="amt">$375</span></div>
-              </div>
-              <a class="btn btn-gold" href="dj-services.html">See Services &amp; Prices</a>
-            </article>
-            <article class="card">
-              <p class="tag">Worship Music</p>
-              <h3>RiverFire Worship</h3>
-              <p class="desc">Original worship songs written and performed by Robert Dinkle — streaming everywhere: Spotify, Apple Music, iHeartRadio, Deezer, and more.</p>
-              <div class="price-rows">
-                <div class="price-row"><span class="hrs">Singles &amp; a 5-song mini album</span><span class="amt">&#9836;</span></div>
-              </div>
-              <a class="btn btn-gold" href="worship.html">Hear the Songs</a>
-            </article>
-            <article class="card featured">
-              <p class="tag">Teachings &amp; Writings</p>
-              <h3>RiverFire Voice</h3>
-              <p class="desc">Deep biblical teachings, investigations, and books — including THE KINGDOM. A new teaching goes out free every Wednesday on Substack.</p>
-              <div class="price-rows">
-                <div class="price-row"><span class="hrs">Every Wednesday</span><span class="amt">FREE</span></div>
-              </div>
-              <a class="btn btn-ember" href="voice.html">Hear the Voice</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-<!-- ================= ABOUT ================= -->
-      <section id="about" class="alt">
-        <div class="wrap">
-          <div class="sec-head">
-            <p class="kicker">About the Founder</p>
-            <h2>Robert Dinkle</h2>
-          </div>
-          <div class="about-grid">
-            <div>
-              <p>Robert Dinkle is a Tampa Bay musician, guitar instructor, worship musician, songwriter, DJ, and founder of RiverFire Entertainment and RiverFire Guitar Academy. With more than 30 years of guitar and music experience and 12 years serving on worship teams, Robert provides private guitar instruction, DJ entertainment, live acoustic music, and professional sound services throughout the Tampa Bay area.</p>
-              <p>RiverFire was built with a greater purpose: to use music, business, and every opportunity God provides to glorify Jesus Christ, advance the Gospel, and impact people for the Kingdom of God.</p>
-              <p class="creed">Faith &bull; Purpose &bull; Souls &bull; Kingdom</p>
-            </div>
-            <div class="fact-box">
-              <dl>
-                <div class="row"><dt>30+</dt><dd>Years of guitar and music experience</dd></div>
-                <div class="row"><dt>12</dt><dd>Years serving on worship teams</dd></div>
-                <div class="row"><dt>Tampa Bay</dt><dd>Riverview &bull; Brandon &bull; Gibsonton &bull; Wimauma &bull; Tampa</dd></div>
-              </dl>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<!-- ================= FAITH & MISSION ================= -->
-      <section id="faith">
-        <div class="wrap">
-          <div class="sec-head">
-            <p class="kicker">Faith &amp; Mission</p>
-            <h2>Our Mission</h2>
-          </div>
-          <div class="faith-grid">
-            <div class="faith-art">
-              <img src="god-loves-you.jpg" alt="God Loves You gospel presentation artwork — Romans 3:23, Romans 6:23, Romans 10:13, and a prayer to receive Jesus Christ" />
-            </div>
-            <div class="faith-copy">
-              <p>RiverFire Entertainment exists to build the Kingdom of God through business. We believe that everything God places in our hands has a purpose beyond ourselves. As He blesses RiverFire, our desire is to put back into His Kingdom what He has entrusted to us — using our time, resources, talents, influence, and increase to advance the Gospel and reach people for Jesus Christ.</p>
-              <p>Our goal is not simply to build a successful business. Our goal is to build something that produces eternal fruit. We want every guitar lesson, every event, every relationship, and every opportunity to become a doorway through which people can encounter the love of God, hear the Gospel, and come into the Kingdom.</p>
-              <p>My wife and I have one heart in this: we want to take souls with us to Heaven. We want to use what God gives us to help make Heaven crowded.</p>
-              <ul class="chips">
-                <li>Build the Kingdom</li>
-                <li>Win Souls</li>
-                <li>Give Back</li>
-                <li>Glorify Jesus</li>
-              </ul>
-              <div class="verses">
-                <blockquote class="verse">&ldquo;But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.&rdquo;<cite>Matthew 6:33 — KJV</cite></blockquote>
-                <blockquote class="verse">&ldquo;The fruit of the righteous is a tree of life; and he that winneth souls is wise.&rdquo;<cite>Proverbs 11:30 — KJV</cite></blockquote>
-                <blockquote class="verse">&ldquo;Freely ye have received, freely give.&rdquo;<cite>Matthew 10:8 — KJV</cite></blockquote>
-                <blockquote class="verse">&ldquo;Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.&rdquo;<cite>1 Corinthians 10:31 — KJV</cite></blockquote>
-              </div>
-
-              <div class="response" id="prayer-response">
-                <h3>Did You Pray This Prayer?</h3>
-                <p><strong style="color: var(--ink);">Tell us what God did.</strong> If you prayed the prayer in the artwork above and made a decision for Jesus Christ, we would love to rejoice with you. Tap the button below and fill out the short form — tell us whether you prayed this prayer for the first time or rededicated your life to Jesus, and share anything you'd like Robert to know.</p>
-                <a class="btn btn-ember" href="https://forms.gle/2JtW6Ymj1zjPP9qa9" target="_blank" rel="noopener noreferrer">&#128293; I Prayed This Prayer</a>
-                <p class="verse-line">&ldquo;Likewise, I say unto you, there is joy in the presence of the angels of God over one sinner that repenteth.&rdquo; — Luke 15:10 KJV</p>
-                <div class="harvest">
-                  <a class="btn btn-ghost" href="https://forms.gle/kQV5hgFXJDp339Jd7" target="_blank" rel="noopener noreferrer">&#128293; Soul-Winning Partners — Submit Your Harvest Report</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<!-- ================= BOOK ================= -->
-      <section id="book" class="tight" style="padding-top: 0;">
-        <div class="wrap">
-          <div class="book">
-            <div>
-              <p class="kicker">Ready to Get Started?</p>
-              <h2>Book RiverFire</h2>
-              <p>Pick what you're interested in, then call or text — Robert will take it from there. Serving Tampa Bay: Riverview, Brandon, Gibsonton, Wimauma &amp; Tampa.</p>
-              <p class="phone-note">Prefer to just dial? <a href="tel:4849579223">484-957-9223</a></p>
-            </div>
-            <div>
-              <label for="service">What are you interested in?</label>
-              <select id="service">
-                <option value="RiverFire Guitar Academy - Guitar Lessons">RiverFire Guitar Academy — Guitar Lessons</option>
-                <option value="DJ Services">DJ Services</option>
-                <option value="Live Acoustic Music">Live Acoustic Music</option>
-                <option value="DJ + Live Music">DJ + Live Music</option>
-              </select>
-              <div class="row">
-                <a class="btn btn-gold" href="tel:4849579223">Call 484-957-9223</a>
-                <a class="btn btn-hero-ghost" id="book-text" href="sms:4849579223?&amp;body=Hi%20Robert!%20I%27m%20interested%20in%20RiverFire%20Guitar%20Academy%20-%20Guitar%20Lessons.">Text to Book</a>
-              </div>
-            </div>
+          <div class="tabs">
+            <a class="tab salv" href="salvation.html"><h3>Salvation Prayer <span class="arr">&rarr;</span></h3><p>The most important page on this site.</p></a>
+            <a class="tab" href="guitar-academy.html"><h3>Guitar Academy <span class="arr">&rarr;</span></h3><p>Private lessons — $30 / 30 minutes.</p></a>
+            <a class="tab" href="dj-services.html"><h3>DJ &amp; Events <span class="arr">&rarr;</span></h3><p>DJ, live acoustic &amp; pro sound.</p></a>
+            <a class="tab" href="worship.html"><h3>RiverFire Worship <span class="arr">&rarr;</span></h3><p>The songs — on every platform.</p></a>
+            <a class="tab" href="voice.html"><h3>RiverFire Voice <span class="arr">&rarr;</span></h3><p>Teachings &amp; THE KINGDOM.</p></a>
+            <a class="tab" href="1000-souls.html"><h3>1,000 Souls <span class="arr">&rarr;</span></h3><p>1,000 souls by Christmas.</p></a>
+            <a class="tab wide" href="about.html"><h3>About &amp; Mission <span class="arr">&rarr;</span></h3><p>Meet Robert — and why RiverFire exists.</p></a>
           </div>
         </div>
       </section>
@@ -796,7 +668,7 @@
           <a href="voice.html">RiverFire Voice</a> &nbsp;&bull;&nbsp;
           <a href="https://open.spotify.com/artist/3eeujxKqZMWmJ5cHYLKNdE" target="_blank" rel="noopener noreferrer">Spotify</a> &nbsp;&bull;&nbsp;
           <a href="https://suno.com/@rwdinkle" target="_blank" rel="noopener noreferrer">Suno</a> &nbsp;&bull;&nbsp;
-          <a href="#faith">Faith &amp; Mission</a>
+          <a href="about.html">About &amp; Mission</a>
         </span>
       </div>
     </footer>

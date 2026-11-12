@@ -576,6 +576,27 @@
           var(--foil) top left / 100% 4px no-repeat,
           var(--hero-bg);
       }
+
+      /* --- homepage revamp (Nov 11, 2026): welcome hero, Jesus strip, door tabs --- */
+      .home-hero { position: relative; overflow: hidden; background: #0a0d1c url("home-hero-bg.jpg") center / cover no-repeat; text-align: center; }
+      .home-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5, 8, 18, 0.62), rgba(5, 8, 18, 0.38) 45%, rgba(5, 8, 18, 0.78)); }
+      .home-hero .wrap { position: relative; z-index: 1; }
+      .home-hero .lede { margin-left: auto; margin-right: auto; }
+      .home-hero .hero-ctas { justify-content: center; }
+      .flame-word { color: #8dbcff; text-shadow: 0 0 16px rgba(255, 106, 0, 0.9), 0 0 44px rgba(215, 25, 32, 0.6), 0 2px 0 rgba(0, 0, 0, 0.4); animation: flamebreathe 3.4s ease-in-out infinite; display: inline-block; }
+      @keyframes flamebreathe { 0%, 100% { text-shadow: 0 0 14px rgba(255, 106, 0, 0.75), 0 0 36px rgba(215, 25, 32, 0.5), 0 2px 0 rgba(0, 0, 0, 0.4); } 50% { text-shadow: 0 0 22px rgba(255, 140, 0, 1), 0 0 58px rgba(215, 25, 32, 0.75), 0 2px 0 rgba(0, 0, 0, 0.4); } }
+      .jesus-strip { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; justify-content: space-between; border: 2px solid transparent; border-radius: 18px; padding: 20px 24px; color: #ffffff; background: linear-gradient(135deg, #141a2e, #241536) padding-box, var(--foil) border-box; box-shadow: var(--shadow); }
+      .jesus-strip p { margin: 0; font-size: 17px; max-width: 42em; color: #e8ecf7; }
+      .tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .tab { display: block; border: 1.5px solid transparent; border-radius: 16px; padding: 20px 22px; text-decoration: none; color: var(--ink); box-shadow: var(--shadow); background: linear-gradient(var(--surface), var(--surface)) padding-box, var(--foil) border-box; transition: transform 0.18s ease; }
+      .tab:hover { transform: translateY(-2px); }
+      .tab h3 { margin: 0 0 4px; font-size: 20px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+      .tab p { margin: 0; color: var(--field-muted); font-size: 15.5px; }
+      .tab .arr { color: var(--river); font-weight: 800; }
+      .tab.salv h3 { color: var(--ember); }
+      .tab.wide { grid-column: 1 / -1; }
+      @media (max-width: 900px) { .tabs { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 560px) { .tabs { grid-template-columns: 1fr; } .jesus-strip .btn { width: 100%; } }
     </style>
   </head>
   <body>
@@ -703,7 +724,7 @@
           <a href="voice.html">RiverFire Voice</a> &nbsp;&bull;&nbsp;
           <a href="https://open.spotify.com/artist/3eeujxKqZMWmJ5cHYLKNdE" target="_blank" rel="noopener noreferrer">Spotify</a> &nbsp;&bull;&nbsp;
           <a href="https://suno.com/@rwdinkle" target="_blank" rel="noopener noreferrer">Suno</a> &nbsp;&bull;&nbsp;
-          <a href="index.html#faith">Faith &amp; Mission</a>
+          <a href="about.html">About &amp; Mission</a>
         </span>
       </div>
     </footer>
