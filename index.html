@@ -576,6 +576,12 @@
         border-radius: 14px;
         padding: 16px 18px;
       }
+      /* Robert (Nov 12, 2026): the panning background was distracting —
+         freeze ALL backdrop motion sitewide. Only the small wordmark
+         glow keeps its slow breathing. */
+      body, body::before, body::after, .hero-photo, .foil-rule, .home-hero {
+        animation: none !important;
+      }
       .card, .topic, .fact-box, figure.shot, blockquote.verse {
         border: 1.5px solid transparent;
         background:
