@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>RiverFire Entertainment — DJ Services & Live Acoustic Music | Tampa Bay</title>
+    <meta name="description" content="RiverFire Entertainment — DJ packages from $300, live acoustic music from $250, DJ + live music from $375. Family-friendly entertainment and professional sound across Tampa Bay, Florida." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RiverFire Entertainment — DJ Services & Live Acoustic Music | Tampa Bay" />
+    <meta property="og:description" content="RiverFire Entertainment — DJ packages from $300, live acoustic music from $250, DJ + live music from $375. Family-friendly entertainment and professional sound across Tampa Bay, Florida." />
+    <meta property="og:image" content="assets/entertainment-banner.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RiverFire Entertainment — DJ Services & Live Acoustic Music | Tampa Bay" />
+    <meta name="twitter:description" content="RiverFire Entertainment — DJ packages from $300, live acoustic music from $250, DJ + live music from $375. Family-friendly entertainment and professional sound across Tampa Bay, Florida." />
+    <meta name="twitter:image" content="assets/entertainment-banner.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #faf7f2;
+        --bg-deep: #f1eadf;
+        --surface: #ffffff;
+        --surface-2: #f6f1e7;
+        --ink: #1d1830;
+        --ink-soft: #453f5c;
+        --muted: #6d6584;
+        --line: #e3dac8;
+        --gold: #17548f;
+        --gold-bright: #2e7cc4;
+        --ember: #b81f00;
+        --violet: #6a55d6;
+        --teal: #0f7a70;
+        --foil: linear-gradient(100deg, #6a55d6, #0f7a70, #c98f22, #c8451b, #b04fd8, #2f7fd0, #6a55d6);
+        --chrome: linear-gradient(100deg, #525963, #a7aeb8, #ffffff, #7c848e, #dde1e7, #616872, #f7f9fb, #525963);
+        /* Text printed directly on the chrome field (not on a card/panel):
+           dark in both schemes, like ink on a foil card. */
+        --field-ink: #1d1830;
+        --field-soft: #38304f;
+        --field-muted: #4c4568;
+        --field-accent: #164a7d;
+        --field-line: rgba(29, 24, 48, 0.38);
+        --hero-bg: #12101e;
+        --hero-ink: #f5f1e8;
+        --hero-muted: #c6c0d8;
+        --btn-ink: #ffffff;
+        --shadow: 0 10px 30px rgba(29, 24, 48, 0.10);
+        --shadow-lg: 0 22px 50px rgba(29, 24, 48, 0.16);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --bg: #0d0b16;
+          --bg-deep: #090711;
+          --surface: #17142a;
+          --surface-2: #1e1936;
+          --ink: #f4f1ea;
+          --ink-soft: #d9d4e8;
+          --muted: #a79fc0;
+          --line: #2e2950;
+          --gold: #5aa5e8;
+          --gold-bright: #8ac2f2;
+          --ember: #e8680c;
+          --violet: #9a8cff;
+          --teal: #3fd0c2;
+          --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+          --shadow-lg: 0 22px 50px rgba(0, 0, 0, 0.55);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        * { transition: none !important; animation: none !important; }
+      }
+      body {
+        margin: 0;
+        font-family: "Work Sans", system-ui, sans-serif;
+        /* The page background itself is the shiny silver chrome foil,
+           slowly panning; cards and panels float on top of it. */
+        background: var(--chrome);
+        background-size: 220% 100%;
+        animation: foil-pan 16s linear infinite;
+        color: var(--ink);
+        line-height: 1.6;
+        font-size: 17px;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { max-width: 100%; display: block; }
+      a { color: inherit; }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+      h1, h2, h3, .display {
+        font-family: "Oswald", "Work Sans", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        line-height: 1.08;
+        margin: 0;
+      }
+      .kicker {
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--gold);
+        margin: 0 0 12px;
+      }
+      .foil-rule {
+        height: 3px;
+        border: 0;
+        margin: 0;
+        background: var(--foil);
+        background-size: 200% 100%;
+        animation: foil-pan 9s linear infinite;
+      }
+      @keyframes foil-pan {
+        from { background-position: 0% 50%; }
+        to { background-position: 200% 50%; }
+      }
+      /* Wordmark: the WHOLE name "RiverFire" is one treatment — the flowing
+         dark-blue river gradient across all nine letters — enveloped in a
+         warm flame aura that BREATHES: a slow, smooth swell and ease, in and
+         out like breath. No red letters, no flicker. The global
+         prefers-reduced-motion rule freezes both the flow and the breath,
+         leaving the resting glow in place. */
+      .wordmark {
+        display: inline-block;
+        filter: drop-shadow(0 0 7px rgba(184, 31, 0, .55)) drop-shadow(0 -1px 18px rgba(232, 104, 12, .38)) drop-shadow(0 -2px 34px rgba(255, 140, 20, .20));
+        animation: flame-breath 5s ease-in-out infinite;
+      }
+      @keyframes flame-breath {
+        0%, 100% { filter: drop-shadow(0 0 7px rgba(184, 31, 0, .55)) drop-shadow(0 -1px 18px rgba(232, 104, 12, .38)) drop-shadow(0 -2px 34px rgba(255, 140, 20, .20)); }
+        50%      { filter: drop-shadow(0 0 11px rgba(207, 58, 6, .78)) drop-shadow(0 -2px 28px rgba(255, 110, 20, .58)) drop-shadow(0 -3px 52px rgba(255, 160, 40, .34)); }
+      }
+      .wordmark-text {
+        background: linear-gradient(100deg, #0d2b52, #17548f, #2e7cc4, #164a7d, #0e5f8a, #0d2b52);
+        background-size: 220% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: river-flow 6s ease-in-out infinite;
+      }
+      @keyframes river-flow {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+      }
+
+      /* ---------- top bar ---------- */
+      .topbar {
+        position: sticky; top: 0; z-index: 50;
+        background: color-mix(in srgb, var(--surface) 88%, transparent);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .topbar-in {
+        display: flex; align-items: center; gap: 18px;
+        padding-top: 12px; padding-bottom: 12px;
+      }
+      .brand {
+        font-family: "Oswald", sans-serif; font-weight: 700;
+        text-transform: uppercase; letter-spacing: 0.04em;
+        font-size: 19px; text-decoration: none; line-height: 1.1;
+        white-space: nowrap;
+      }
+      .brand small {
+        display: block; font-size: 10.5px; font-weight: 500;
+        letter-spacing: 0.3em; color: var(--muted);
+      }
+      nav.main { margin-left: auto; display: flex; gap: 22px; }
+      nav.main a {
+        text-decoration: none; font-weight: 600; font-size: 15px;
+        color: var(--ink-soft);
+      }
+      nav.main a:hover { color: var(--gold); }
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+        font-family: "Oswald", sans-serif; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.06em;
+        text-decoration: none; border-radius: 10px;
+        padding: 13px 22px; font-size: 16px;
+        border: 2px solid transparent; cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        min-height: 50px; text-align: center;
+      }
+      .btn:active { transform: translateY(1px); }
+      .btn-gold { background: linear-gradient(100deg, #0d2b52, #17548f, #2e7cc4, #164a7d); color: #ffffff; position: relative; overflow: hidden; }
+      .btn-gold:hover { filter: brightness(1.18); box-shadow: var(--shadow); }
+      .btn-gold::after {
+        content: ""; position: absolute; inset: 0; pointer-events: none;
+        background: linear-gradient(115deg, transparent 30%, rgba(154,140,255,.45) 42%, rgba(63,208,194,.45) 50%, rgba(255,255,255,.55) 55%, rgba(232,104,12,.4) 62%, transparent 75%);
+        transform: translateX(-110%);
+        transition: transform 0.6s ease;
+      }
+      .btn-gold:hover::after { transform: translateX(110%); }
+      .btn-ember { background: linear-gradient(100deg, #8c0f00, #cf3a06, #e8680c, #b81f00); color: #fff; }
+      .btn-ember:hover { filter: brightness(1.08); box-shadow: var(--shadow); }
+      .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--surface); }
+      .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+      .btn-hero-ghost { border-color: rgba(245,241,232,.4); color: var(--hero-ink); background: transparent; }
+      .btn-hero-ghost:hover { border-color: var(--gold-bright); color: var(--gold-bright); }
+      .topbar .btn { padding: 9px 16px; min-height: 42px; font-size: 14.5px; white-space: nowrap; }
+      @media (max-width: 760px) {
+        nav.main { display: none; }
+        .topbar-in { gap: 10px; }
+        .brand { font-size: 16px; min-width: 0; white-space: normal; line-height: 1.05; flex: 1 1 auto; }
+        .brand small { font-size: 9.5px; letter-spacing: 0.22em; margin-top: 3px; }
+        .topbar .btn { font-size: 13px; padding: 8px 12px; min-height: 40px; flex: 0 0 auto; }
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        background:
+          radial-gradient(560px 340px at 88% -60px, rgba(106,85,214,.34), transparent 70%),
+          radial-gradient(520px 320px at 6% 112%, rgba(15,122,112,.30), transparent 70%),
+          radial-gradient(420px 260px at 58% 118%, rgba(207,58,6,.20), transparent 70%),
+          var(--hero-bg);
+        color: var(--hero-ink);
+        position: relative; overflow: hidden;
+      }
+      .hero-in {
+        display: grid; grid-template-columns: 1.05fr 0.95fr;
+        gap: 44px; align-items: center;
+        padding-top: 56px; padding-bottom: 56px;
+      }
+      .hero .kicker { color: var(--gold-bright); }
+      .hero h1 { font-size: clamp(36px, 10.5vw, 76px); font-weight: 700; }
+      @media (min-width: 861px) { .hero h1 { font-size: clamp(44px, 7.2vw, 76px); } }
+      .hero .lede {
+        font-size: clamp(18px, 2.4vw, 22px); color: var(--hero-muted);
+        margin: 18px 0 8px; max-width: 34em;
+      }
+      .hero .lede strong { color: var(--hero-ink); font-weight: 600; }
+      .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+      .hero-photo {
+        border-radius: 14px; overflow: hidden;
+        box-shadow: 0 30px 60px rgba(0,0,0,.5);
+        padding: 3px;
+        background: var(--chrome);
+        background-size: 200% 100%;
+        animation: foil-pan 9s linear infinite;
+      }
+      .hero-photo img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; border-radius: 11px; }
+      .stats {
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid rgba(245,241,232,.16);
+      }
+      .stat { padding: 20px 22px 24px; }
+      .stat + .stat { border-left: 1px solid rgba(245,241,232,.16); }
+      .stat b {
+        display: block; font-family: "Oswald", sans-serif;
+        font-size: clamp(24px, 3.4vw, 34px); font-weight: 600;
+        line-height: 1.1;
+        background: var(--foil);
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .stat span { color: var(--hero-muted); font-size: 14.5px; }
+      @media (max-width: 860px) {
+        .hero-in { grid-template-columns: 1fr; padding-top: 38px; padding-bottom: 38px; gap: 30px; }
+        .stats { grid-template-columns: 1fr; }
+        .stat + .stat { border-left: 0; border-top: 1px solid rgba(245,241,232,.16); }
+        .stat { padding: 14px 4px 16px; }
+      }
+
+      /* ---------- sections ---------- */
+      section { padding: 72px 0; }
+      section.tight { padding: 56px 0; }
+      /* Alternate sections get only a translucent steel wash so the
+         chrome foil background still reads silver beneath them. */
+      .alt { background: color-mix(in srgb, #646b74 16%, transparent); }
+      .sec-head { max-width: 46em; margin-bottom: 36px; }
+      .sec-head h2 { font-size: clamp(32px, 5vw, 46px); font-weight: 600; }
+      .sec-head p { color: var(--muted); font-size: 18px; margin: 12px 0 0; }
+
+      /* ---------- service cards ---------- */
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+      @media (max-width: 920px) { .cards { grid-template-columns: 1fr; } }
+      .card {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: 14px; padding: 30px 28px 28px;
+        box-shadow: var(--shadow);
+        display: flex; flex-direction: column;
+      }
+      .card .tag {
+        font-family: "Oswald", sans-serif; font-size: 12.5px; font-weight: 600;
+        letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal);
+        margin: 0 0 8px;
+      }
+      @media (prefers-color-scheme: light) { .card .tag { color: var(--teal); } }
+      .card h3 { font-size: 27px; font-weight: 600; margin-bottom: 10px; }
+      .card p.desc { color: var(--muted); margin: 0 0 20px; font-size: 16px; }
+      .price-rows { margin: 0 0 22px; }
+      .price-row {
+        display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+        padding: 10px 0; border-top: 1px dashed var(--line);
+      }
+      .price-row:first-child { border-top: 0; padding-top: 0; }
+      .price-row .hrs { color: var(--ink-soft); font-weight: 500; font-size: 15.5px; }
+      .price-row .amt {
+        font-family: "Oswald", sans-serif; font-size: 30px; font-weight: 600; color: var(--gold);
+        white-space: nowrap;
+      }
+      .card .btn { margin-top: auto; width: 100%; }
+      .card.featured {
+        border: 2px solid transparent;
+        background:
+          linear-gradient(var(--surface), var(--surface)) padding-box,
+          var(--chrome) border-box;
+      }
+
+      /* ---------- lessons ---------- */
+      .split { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+      @media (max-width: 920px) { .split { grid-template-columns: 1fr; gap: 30px; } }
+      .flyer {
+        border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-lg);
+        border: 1px solid var(--line);
+      }
+      .lesson-price {
+        display: flex; align-items: baseline; gap: 14px; margin: 6px 0 4px;
+      }
+      .lesson-price .amt {
+        font-family: "Oswald", sans-serif; font-size: 64px; font-weight: 700;
+        line-height: 1;
+        background: var(--foil);
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .lesson-price .per { font-size: 19px; color: var(--ink-soft); font-weight: 600; }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 24px; padding: 0; list-style: none; }
+      .chips li {
+        border: 1.5px solid var(--line); border-radius: 999px;
+        padding: 6px 14px; font-size: 14.5px; font-weight: 600; color: var(--ink-soft);
+        background: var(--surface);
+      }
+      .topics { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 34px; }
+      @media (max-width: 640px) { .topics { grid-template-columns: 1fr; } }
+      .topic {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        padding: 22px 22px 18px;
+      }
+      .topic h3 { font-size: 19px; font-weight: 600; margin-bottom: 8px; text-transform: none; letter-spacing: 0; font-family: "Work Sans", sans-serif; }
+      .topic p { color: var(--muted); margin: 0; font-size: 15.5px; }
+      .music-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+
+      /* ---------- gallery ---------- */
+      .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      @media (max-width: 920px) { .gallery { grid-template-columns: 1fr; } }
+      figure.shot {
+        margin: 0; border-radius: 14px; overflow: hidden;
+        background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow);
+      }
+      figure.shot img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+      figure.shot img.top { object-position: 50% 16%; }
+      figure.shot figcaption {
+        padding: 13px 18px; font-family: "Oswald", sans-serif;
+        text-transform: uppercase; letter-spacing: 0.08em; font-size: 15px; font-weight: 500;
+      }
+
+      /* ---------- about ---------- */
+      .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 44px; align-items: start; }
+      @media (max-width: 920px) { .about-grid { grid-template-columns: 1fr; gap: 28px; } }
+      .about-grid p { color: var(--ink-soft); margin: 0 0 16px; font-size: 17.5px; }
+      .creed {
+        font-family: "Oswald", sans-serif; text-transform: uppercase;
+        letter-spacing: 0.14em; font-size: 15px; color: var(--gold); font-weight: 600;
+      }
+      .fact-box {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+        padding: 26px 28px; box-shadow: var(--shadow);
+      }
+      .fact-box dl { margin: 0; }
+      .fact-box .row { padding: 12px 0; border-top: 1px dashed var(--line); }
+      .fact-box .row:first-child { border-top: 0; padding-top: 0; }
+      .fact-box dt {
+        font-family: "Oswald", sans-serif; font-size: 26px; font-weight: 600; color: var(--gold); line-height: 1.15;
+      }
+      .fact-box dd { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+
+      /* ---------- faith ---------- */
+      .faith-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 44px; align-items: start; }
+      @media (max-width: 920px) { .faith-grid { grid-template-columns: 1fr; gap: 30px; } }
+      .faith-art { border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--line); }
+      .faith-copy p { color: var(--ink-soft); margin: 0 0 16px; font-size: 17.5px; }
+      .verses { margin: 26px 0; display: grid; gap: 14px; }
+      blockquote.verse {
+        margin: 0; padding: 16px 20px;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+        font-size: 16.5px; color: var(--ink-soft);
+      }
+      blockquote.verse cite {
+        display: block; margin-top: 6px; font-style: normal; font-weight: 700;
+        color: var(--gold); font-size: 14.5px; letter-spacing: 0.04em;
+      }
+      .response {
+        margin-top: 30px;
+        border: 2px solid transparent;
+        background:
+          linear-gradient(var(--surface), var(--surface)) padding-box,
+          var(--chrome) border-box;
+        border-radius: 14px; padding: 28px; box-shadow: var(--shadow);
+      }
+      .response h3 { font-size: 24px; font-weight: 600; margin-bottom: 8px; }
+      .response p { color: var(--muted); margin: 0 0 18px; font-size: 16px; }
+      .book select {
+        font: inherit; font-size: 16px; color: var(--ink);
+        background: var(--bg); border: 1.5px solid var(--line); border-radius: 9px;
+        padding: 11px 13px; width: 100%;
+      }
+      .book select:focus {
+        outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold);
+      }
+      .response .verse-line { margin-top: 16px; font-size: 15px; color: var(--muted); font-style: italic; }
+      .harvest { margin-top: 18px; }
+
+      /* ---------- book ---------- */
+      .book {
+        background:
+          var(--chrome) top left / 100% 4px no-repeat,
+          var(--hero-bg);
+        color: var(--hero-ink);
+        border-radius: 16px; padding: 40px 38px;
+        display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center;
+      }
+      @media (max-width: 860px) { .book { grid-template-columns: 1fr; padding: 32px 24px; } }
+      .book h2 { font-size: clamp(30px, 4.6vw, 42px); font-weight: 600; }
+      .book .kicker { color: var(--gold-bright); }
+      .book p { color: var(--hero-muted); margin: 12px 0 0; }
+      .book label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 15.5px; }
+      .book select {
+        background: #fff; color: #1d1830; border: 0; margin-bottom: 16px;
+      }
+      .book .row { display: flex; flex-wrap: wrap; gap: 12px; }
+      .book .phone-note { margin-top: 14px; font-size: 15px; color: var(--hero-muted); }
+      .book .phone-note a { color: var(--gold-bright); font-weight: 700; text-decoration: none; }
+
+      /* ---------- footer ---------- */
+      footer {
+        border-top: 1px solid var(--line); padding: 34px 0 90px;
+        color: var(--muted); font-size: 14.5px;
+      }
+      @media (min-width: 761px) { footer { padding-bottom: 40px; } }
+      footer .foot-in { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between; }
+      footer .sig {
+        font-family: "Oswald", sans-serif; letter-spacing: 0.14em;
+        text-transform: uppercase; font-size: 13px; color: var(--ink-soft);
+      }
+      footer a { color: var(--ink-soft); font-weight: 600; text-decoration: none; }
+      footer a:hover { color: var(--gold); }
+
+      /* ---------- text printed on the chrome field ----------
+         Anything not sitting on a card or a dark panel uses these dark
+         inks, so it stays readable on the silver in both color schemes. */
+      .sec-head h2 { color: var(--field-ink); }
+      .sec-head p { color: var(--field-muted); }
+      section .kicker { color: var(--field-accent); }
+      #lessons .split h2 { color: var(--field-ink); }
+      .lesson-price .per { color: var(--field-soft); }
+      .about-grid p { color: var(--field-soft); }
+      .about-grid .creed { color: var(--field-accent); }
+      .faith-copy > p { color: var(--field-soft); }
+      footer { color: var(--field-muted); }
+      footer .sig { color: var(--field-ink); }
+      footer a { color: var(--field-soft); }
+      footer a:hover { color: var(--field-accent); }
+
+      /* ---------- call/text fallback panel ---------- */
+      .call-pop {
+        position: fixed; inset: 0; z-index: 100;
+        display: flex; align-items: center; justify-content: center;
+        padding: 20px;
+        background: rgba(13, 10, 24, 0.62);
+      }
+      .call-pop[hidden] { display: none; }
+      .call-card {
+        border: 2px solid transparent; border-radius: 16px;
+        padding: 28px; max-width: 420px; width: 100%;
+        background:
+          linear-gradient(var(--surface), var(--surface)) padding-box,
+          var(--chrome) border-box;
+        box-shadow: var(--shadow-lg); text-align: center; color: var(--ink);
+      }
+      .call-card [hidden] { display: none !important; }
+      .call-card h3 { font-size: 23px; font-weight: 600; margin-bottom: 4px; }
+      .call-card p { color: var(--muted); margin: 0 0 14px; font-size: 15.5px; }
+      .call-num {
+        display: block; font-family: "Oswald", sans-serif; font-weight: 700;
+        font-size: clamp(30px, 8vw, 40px); letter-spacing: 0.02em; line-height: 1.15;
+        color: var(--gold); text-decoration: none; margin: 8px 0 12px;
+      }
+      .call-msg-label { text-align: left; font-weight: 600; color: var(--ink-soft); margin-bottom: 6px !important; }
+      .call-msg {
+        white-space: pre-wrap; text-align: left;
+        background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px;
+        padding: 12px 14px; color: var(--ink-soft); font-size: 15.5px; margin: 0 0 14px;
+      }
+      .call-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+      #call-copied { font-weight: 700; color: var(--teal); display: block; margin-top: 12px; min-height: 1.2em; font-size: 15px; }
+
+      /* ---------- mobile book bar ---------- */
+      .bookbar {
+        display: none;
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+        background: color-mix(in srgb, var(--hero-bg) 94%, transparent);
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(245,241,232,.18);
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        gap: 10px;
+      }
+      .bookbar .btn { flex: 1; min-height: 50px; }
+      @media (max-width: 760px) { .bookbar { display: flex; } }
+    
+      /* --- multi-page additions (Nov 11, 2026) --- */
+      nav.main a.active { color: var(--gold); }
+      .prose { max-width: 46em; }
+      .prose p { color: var(--field-soft); font-size: 17.5px; margin: 0 0 16px; }
+      .prose p strong { color: var(--field-ink); }
+      .hero .card { color: var(--ink); text-align: left; }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="index.html"><span class="wordmark"><span class="wordmark-text">RiverFire</span></span> Entertainment<small>Tampa Bay &bull; Florida</small></a>
+        <nav class="main" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="guitar-academy.html">Guitar Academy</a>
+          <a href="dj-services.html" class="active">DJ &amp; Events</a>
+          <a href="voice.html">RiverFire Voice</a>
+          <a href="1000-souls.html">1,000 Souls</a>
+        </nav>
+        <a class="btn btn-gold" href="tel:4849579223">Call / Text to Book</a>
+      </div>
+      <hr class="foil-rule" />
+    </header>
+
+    <main id="top">
+      <div class="hero">
+        <div class="wrap hero-in">
+          <div>
+            <p class="kicker">DJ &bull; Live Acoustic &bull; Professional Sound</p>
+            <h1><span class="wordmark"><span class="wordmark-text">RiverFire</span></span><br />Entertainment</h1>
+            <p class="lede">DJ entertainment, live acoustic music, and professional sound for churches, ministries, families, celebrations, community events and special occasions throughout the Tampa Bay area — family-friendly, one provider, one sound system, one clean booking process.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-gold" href="tel:4849579223">&#128222; Call / Text 484-957-9223</a>
+              <a class="btn btn-hero-ghost" href="#services">See Services &amp; Prices</a>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <img src="assets/entertainment-banner.jpg" alt="RiverFire entertainment artwork — live music and DJ events" />
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="stats">
+            <div class="stat"><b>30+</b><span>Years of guitar and music experience</span></div>
+            <div class="stat"><b>12</b><span>Years serving on worship teams</span></div>
+            <div class="stat"><b>Tampa Bay</b><span>Riverview &bull; Brandon &bull; Gibsonton &bull; Wimauma &bull; Tampa</span></div>
+          </div>
+        </div>
+      </div>
+<!-- ================= SERVICES ================= -->
+      <section id="services">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">DJ &amp; Entertainment Pricing</p>
+            <h2>Choose Your Service</h2>
+            <p>Professional, family-friendly entertainment — one provider, one sound system, one clean booking process. Every package includes setup &amp; breakdown.</p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <p class="tag">Professional Entertainment</p>
+              <h3>DJ Package</h3>
+              <p class="desc">Professional DJ service with customized playlists, a powerful PA system with dual subwoofers, and a microphone for announcements.</p>
+              <div class="price-rows">
+                <div class="price-row"><span class="hrs">Up to 3 hours</span><span class="amt">$300</span></div>
+                <div class="price-row"><span class="hrs">Up to 4 hours</span><span class="amt">$400</span></div>
+              </div>
+              <a class="btn btn-gold" href="tel:4849579223">Call / Text to Book</a>
+            </article>
+            <article class="card">
+              <p class="tag">Live Performance</p>
+              <h3>Live Acoustic Music</h3>
+              <p class="desc">Live guitar and vocals for worship nights, dinners, celebrations, church gatherings and special events.</p>
+              <div class="price-rows">
+                <div class="price-row"><span class="hrs">Up to 2 hours</span><span class="amt">$250</span></div>
+                <div class="price-row"><span class="hrs">Up to 3 hours</span><span class="amt">$350</span></div>
+              </div>
+              <a class="btn btn-gold" href="tel:4849579223">Call / Text to Book</a>
+            </article>
+            <article class="card featured">
+              <p class="tag">The Full RiverFire Experience</p>
+              <h3>DJ + Live Music</h3>
+              <p class="desc">Start with live acoustic music and transition into DJ entertainment — one complete event package.</p>
+              <div class="price-rows">
+                <div class="price-row"><span class="hrs">Up to 3 hours</span><span class="amt">$375</span></div>
+                <div class="price-row"><span class="hrs">Up to 4 hours</span><span class="amt">$475</span></div>
+              </div>
+              <a class="btn btn-ember" href="tel:4849579223">Call / Text to Book</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+<!-- ================= GALLERY ================= -->
+      <section id="gallery">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">RiverFire in Action</p>
+            <h2>Photos &amp; Promo Art</h2>
+          </div>
+          <div class="gallery">
+            <figure class="shot">
+              <img src="assets/hero-portrait.jpg" alt="Guitar lessons artwork — Robert Dinkle playing electric guitar" loading="lazy" />
+              <figcaption>RiverFire Guitar Academy — Guitar Lessons</figcaption>
+            </figure>
+            <figure class="shot">
+              <img class="top" src="assets/live-stage.jpg" alt="Live acoustic performance photo — Robert Dinkle playing guitar on an outdoor stage" loading="lazy" />
+              <figcaption>Live Acoustic</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="assets/entertainment-banner.jpg" alt="RiverFire entertainment artwork — live music and DJ events" loading="lazy" />
+              <figcaption>Events &amp; Sound</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+<!-- ================= BOOK ================= -->
+      <section id="book" class="tight" style="padding-top: 0;">
+        <div class="wrap">
+          <div class="book">
+            <div>
+              <p class="kicker">Ready to Get Started?</p>
+              <h2>Book RiverFire</h2>
+              <p>Pick what you're interested in, then call or text — Robert will take it from there. Serving Tampa Bay: Riverview, Brandon, Gibsonton, Wimauma &amp; Tampa.</p>
+              <p class="phone-note">Prefer to just dial? <a href="tel:4849579223">484-957-9223</a></p>
+            </div>
+            <div>
+              <label for="service">What are you interested in?</label>
+              <select id="service">
+                <option value="RiverFire Guitar Academy - Guitar Lessons">RiverFire Guitar Academy — Guitar Lessons</option>
+                <option value="DJ Services" selected>DJ Services</option>
+                <option value="Live Acoustic Music">Live Acoustic Music</option>
+                <option value="DJ + Live Music">DJ + Live Music</option>
+              </select>
+              <div class="row">
+                <a class="btn btn-gold" href="tel:4849579223">Call 484-957-9223</a>
+                <a class="btn btn-hero-ghost" id="book-text" href="sms:4849579223?&amp;body=Hi%20Robert!%20I%27m%20interested%20in%20RiverFire%20Guitar%20Academy%20-%20Guitar%20Lessons.">Text to Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <hr class="foil-rule" />
+    <footer>
+      <div class="wrap foot-in">
+        <span class="sig">RiverFire Entertainment &bull; Tampa Bay, Florida &bull; Founded by Robert Dinkle</span>
+        <span>
+          <a href="tel:4849579223">484-957-9223</a> &nbsp;&bull;&nbsp;
+          <a href="guitar-academy.html">Guitar Academy</a> &nbsp;&bull;&nbsp;
+          <a href="dj-services.html">DJ &amp; Events</a> &nbsp;&bull;&nbsp;
+          <a href="voice.html">RiverFire Voice</a> &nbsp;&bull;&nbsp;
+          <a href="https://open.spotify.com/artist/3eeujxKqZMWmJ5cHYLKNdE" target="_blank" rel="noopener noreferrer">Spotify</a> &nbsp;&bull;&nbsp;
+          <a href="https://suno.com/@rwdinkle" target="_blank" rel="noopener noreferrer">Suno</a> &nbsp;&bull;&nbsp;
+          <a href="index.html#faith">Faith &amp; Mission</a>
+        </span>
+      </div>
+    </footer>
+
+<div class="bookbar" aria-label="Quick booking">
+      <a class="btn btn-gold" href="tel:4849579223">Call to Book</a>
+      <a class="btn btn-ember" href="sms:4849579223?&amp;body=Hi%20Robert!%20I%27m%20interested%20in%20booking%20RiverFire.">Text to Book</a>
+    </div>
+
+<div class="call-pop" id="call-pop" hidden role="dialog" aria-modal="true" aria-labelledby="call-pop-title">
+      <div class="call-card">
+        <h3 id="call-pop-title">Call or Text Robert</h3>
+        <a class="call-num" id="call-num" href="tel:4849579223">484-957-9223</a>
+        <div id="call-msg-wrap" hidden>
+          <p class="call-msg-label">Your message is ready:</p>
+          <p class="call-msg" id="call-msg"></p>
+        </div>
+        <div class="call-actions">
+          <button type="button" class="btn btn-gold" id="call-copy-num">Copy the Number</button>
+          <button type="button" class="btn btn-gold" id="call-copy-msg" hidden>Copy the Message</button>
+          <button type="button" class="btn btn-ghost" id="call-close">Close</button>
+        </div>
+        <span id="call-copied" role="status"></span>
+        <p style="margin: 10px 0 0;">Call or text anytime — Robert will take it from there.</p>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var PHONE = "4849579223";
+
+        // Booking: keep the "Text to Book" message matched to the chosen service.
+        var service = document.getElementById("service");
+        var bookText = document.getElementById("book-text");
+        function syncBookText() {
+          var msg = "Hi Robert! I'm interested in " + service.value + ".";
+          bookText.setAttribute("href", "sms:" + PHONE + "?&body=" + encodeURIComponent(msg));
+        }
+        if (service && bookText) {
+          service.addEventListener("change", syncBookText);
+          syncBookText();
+        }
+
+        // Shared clipboard fallback (used by the call/text panel below).
+        function fallbackCopy(text) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "absolute";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          var ok = false;
+          try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+          document.body.removeChild(ta);
+          return ok;
+        }
+
+        // Call/Text buttons: tel:/sms: navigation is silently swallowed inside
+        // embedded preview windows, leaving a dead tap. There, open the
+        // call panel instead — the number big, the ready-made text (for sms:
+        // links) shown, both copyable. On a full page the links are left
+        // alone and dial / open Messages natively.
+        var popEl = document.getElementById("call-pop");
+        var popMsgWrap = document.getElementById("call-msg-wrap");
+        var popMsg = document.getElementById("call-msg");
+        var popCopyNum = document.getElementById("call-copy-num");
+        var popCopyMsg = document.getElementById("call-copy-msg");
+        var popCopied = document.getElementById("call-copied");
+        var popClose = document.getElementById("call-close");
+        var popMsgText = "";
+
+        function openCallPop(href) {
+          popMsgText = "";
+          if (href.indexOf("sms:") === 0) {
+            var idx = href.indexOf("body=");
+            if (idx !== -1) {
+              try { popMsgText = decodeURIComponent(href.slice(idx + 5)); } catch (e) { popMsgText = ""; }
+            }
+          }
+          popMsgWrap.hidden = !popMsgText;
+          popCopyMsg.hidden = !popMsgText;
+          if (popMsgText) { popMsg.textContent = popMsgText; }
+          popCopied.textContent = "";
+          popEl.hidden = false;
+          popClose.focus();
+        }
+        function closeCallPop() { popEl.hidden = true; }
+        function copyToPanel(text, okMsg) {
+          function done() { popCopied.textContent = okMsg; }
+          function fail() { popCopied.textContent = "Copy didn't take — long-press to copy it by hand."; }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, function () {
+              if (fallbackCopy(text)) { done(); } else { fail(); }
+            });
+          } else if (fallbackCopy(text)) {
+            done();
+          } else {
+            fail();
+          }
+        }
+        var contactLinks = document.querySelectorAll('a[href^="tel:"], a[href^="sms:"]');
+        Array.prototype.forEach.call(contactLinks, function (link) {
+          link.addEventListener("click", function (ev) {
+            if (window.top === window.self) { return; }
+            ev.preventDefault();
+            openCallPop(link.getAttribute("href") || "");
+          });
+        });
+        popCopyNum.addEventListener("click", function () { copyToPanel("484-957-9223", "Number copied!"); });
+        popCopyMsg.addEventListener("click", function () { copyToPanel(popMsgText, "Message copied!"); });
+        popClose.addEventListener("click", closeCallPop);
+        popEl.addEventListener("click", function (ev) { if (ev.target === popEl) { closeCallPop(); } });
+        document.addEventListener("keydown", function (ev) {
+          if (ev.key === "Escape" && !popEl.hidden) { closeCallPop(); }
+        });
+      })();
+        </script>
+  </body>
+</html>
